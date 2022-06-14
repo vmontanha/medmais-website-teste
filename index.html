@@ -7,21 +7,22 @@
           <title>Grupo MedMais</title>
           <link rel="stylesheet" href="./css/style.css">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 
 <body>
 
           <header>
-                    <a href="index.html" class="brand"><img class="logo" src="./img/logo.svg" /></a>
+                    <a href="index.html" class="brand" id="logo"><img class="logo" src="./img/logo.svg" /></a>
                     <div class="menu-btn"></div>
                     <div class="navigation">
                               <div class="navigation-items">
-                                        <a href="#">Serviços</a>
-                                        <a href="#">Investidores</a>
-                                        <a href="#">Contato</a>
-                                        <a href="#">Blog</a>
-                                        <a href="#" class="active-link-menu">PT</a>
-                                        <a href="#">EN</a>
+                                        <a href="#" id="menu">Serviços</a>
+                                        <a href="#" id="menu">Investidores</a>
+                                        <a href="#" id="menu">Contato</a>
+                                        <a href="#" id="menu">Blog</a>
+                                        <a href="#" id="menu" class="active-link-menu">PT</a>
+                                        <a href="#" id="menu">EN</a>
                               </div>
                     </div>
           </header>
@@ -35,11 +36,12 @@
                     <video class="video-slide" src="./img/4.mp4" autoplay muted loop></video>
                     <video class="video-slide" src="./img/5.mp4" autoplay muted loop></video>
                     <div class="content active">
-                              <h1>SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem earum aut optio, ullam
+                              <h1 class="home-title">SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
+                              <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                                        earum aut optio, ullam
                                         corporis repellendus? Nam illo et, culpa maxime, fugit optio suscipit obcaecati
                                         incidunt iste ullam exercitationem ratione? Aperiam.</p>
-                              <a href="#">Saiba Mais</a>
+                              <a href="#" class="home-button">Saiba Mais</a>
                     </div>
                     <div class="content">
                               <h1>SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
@@ -133,6 +135,28 @@
                                         sliderNav(i);
                               });
                     });
+
+                    // GSAP
+                    gsap.from("#logo", {
+                              duration: 6, y: 500, x: 500, opacity: .5, scale: 5
+                    });
+                    // MENU
+                    gsap.from('#menu', { opacity: 0, duration: 2, delay: 6, y: 100, ease: 'expo.out', stagger: .4 })
+                    // Text Home
+                    gsap.from(".home-title", {
+                              duration: 3, x: -200, opacity: 0, delay: 6
+                    });
+                    // Text Home
+                    gsap.from(".home-text", {
+                              duration: 3, x: -200, opacity: 0, delay: 6,
+                    });
+                    // button Home
+                    gsap.from(".home-button", {
+                              duration: 3, y: -200, opacity: 0, delay: 6,
+                    });
+                    // Slide Nav
+                    gsap.from('.nav-btn', { opacity: 0, duration: 2, delay: 6, y: 100, ease: 'expo.out', stagger: .4 })
+
           </script>
 
 </body>

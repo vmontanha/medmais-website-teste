@@ -210,7 +210,7 @@ section {
 
 .video-slide.active {
           clip-path: circle(150% at 0 50%);
-          transition: 2s ease;
+          transition: 6s ease;
           transition-property: clip-path;
 }
 
