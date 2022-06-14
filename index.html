@@ -17,12 +17,24 @@
                     <div class="menu-btn"></div>
                     <div class="navigation">
                               <div class="navigation-items">
-                                        <a href="#" id="menu">Serviços</a>
-                                        <a href="#" id="menu">Investidores</a>
-                                        <a href="#" id="menu">Contato</a>
-                                        <a href="#" id="menu">Blog</a>
-                                        <a href="#" id="menu" class="active-link-menu">PT</a>
-                                        <a href="#" id="menu">EN</a>
+                                        <div class="nav-link">
+                                                  <a href="#" id="menu">Serviços</a>
+                                        </div>
+                                        <div class="nav-link">
+                                                  <a href="#" id="menu">Investidores</a>
+                                        </div>
+                                        <div class="nav-link">
+                                                  <a href="#" id="menu">Contato</a>
+                                        </div>
+                                        <div class="nav-link">
+                                                  <a href="#" id="menu">Blog</a>
+                                        </div>
+                                        <div class="nav-link">
+                                                  <a href="#" id="menu" class="active-link-menu">PT</a>>
+                                        </div>
+                                        <div class="nav-link">
+                                                  <a href="#" id="menu">EN</a>
+                                        </div>
                               </div>
                     </div>
           </header>
@@ -138,24 +150,24 @@
 
                     // GSAP
                     gsap.from("#logo", {
-                              duration: 6, y: 500, x: 500, opacity: .5, scale: 5
+                              duration: 1, y: -100, opacity: 1
                     });
                     // MENU
-                    gsap.from('#menu', { opacity: 0, duration: 2, delay: 6, y: 100, ease: 'expo.out', stagger: .4 })
+                    gsap.from('.nav-link', { duration: 2, y: -100, opacity: 1, stagger: 0.5 })
                     // Text Home
                     gsap.from(".home-title", {
-                              duration: 3, x: -200, opacity: 0, delay: 6
+                              duration: 3, x: -100, opacity: 0, delay: 1
                     });
                     // Text Home
                     gsap.from(".home-text", {
-                              duration: 3, x: -200, opacity: 0, delay: 6,
+                              duration: 3, x: -100, opacity: 0, delay: 1,
                     });
                     // button Home
                     gsap.from(".home-button", {
-                              duration: 3, y: -200, opacity: 0, delay: 6,
+                              duration: 3, y: -200, opacity: 0, delay: 3,
                     });
                     // Slide Nav
-                    gsap.from('.nav-btn', { opacity: 0, duration: 2, delay: 6, y: 100, ease: 'expo.out', stagger: .4 })
+                    gsap.from('.nav-btn', { opacity: 0, duration: 2, delay: 4, y: 100, ease: 'expo.out', stagger: .4 })
 
           </script>
 

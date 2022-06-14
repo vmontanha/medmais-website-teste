@@ -43,6 +43,11 @@ header .navigation .navigation-items a {
           transition: 0.3s ease;
 }
 
+header .navigation .navigation-items {
+          position: relative;
+          display: flex;
+}
+
 header .navigation .navigation-items a:before {
           content: '';
           position: absolute;
@@ -244,6 +249,12 @@ section {
           }
 
           header .navigation .navigation-items a {
+                    color: #222;
+                    font-size: 1.2em;
+                    margin: 20px;
+          }
+
+          header .navigation .navigation-items {
                     color: #222;
                     font-size: 1.2em;
                     margin: 20px;
