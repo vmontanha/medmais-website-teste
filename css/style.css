@@ -86,7 +86,7 @@ header .navigation .navigation-items a:hover:before {
           background: #fff;
           position: relative;
           z-index: 9999;
-          top: calc(100px - 25px);
+          top: 95px;
           margin-right: auto;
           margin-left: auto;
 }
