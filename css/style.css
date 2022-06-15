@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+          --panel-width: calc(100% / 6);
+          --darkblue: #000;
+          --lightgray: #D70E2E;
+}
+
+
 * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
           font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+          background-color: #000;
+          /* overflow: hidden; */
 }
 
 header {
@@ -61,6 +76,19 @@ header .navigation .navigation-items a:before {
 
 header .navigation .navigation-items a:hover:before {
           width: 100%;
+}
+
+.row {
+          height: 1px;
+          opacity: 0.4;
+          border: none;
+          width: 80%;
+          background: #fff;
+          position: relative;
+          z-index: 9999;
+          top: calc(100px - 25px);
+          margin-right: auto;
+          margin-left: auto;
 }
 
 section {
@@ -316,5 +344,68 @@ section {
 
           .home .content p {
                     font-size: 13px;
+          }
+}
+
+ul {
+          list-style: none;
+}
+
+.panels {
+          position: fixed;
+          top: 0;
+          left: 50%;
+          width: 180vw;
+          height: 100%;
+          transform: translateX(-50%) skewX(-35deg);
+          clip-path: circle(100%);
+          z-index: 1;
+          background: var(--lightgray);
+}
+
+.panels .panel {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: var(--panel-width);
+          transform: scaleY(0);
+          transform-origin: top;
+          background: var(--darkblue);
+}
+
+.panels .panel:nth-child(even) {
+          transform-origin: bottom;
+}
+
+.panels .panel:nth-child(2) {
+          left: calc(var(--panel-width) - 1px);
+}
+
+.panels .panel:nth-child(3) {
+          left: calc(calc(var(--panel-width) * 2) - 2px);
+}
+
+.panels .panel:nth-child(4) {
+          left: calc(calc(var(--panel-width) * 3) - 4px);
+}
+
+.panels .panel:nth-child(5) {
+          left: calc(calc(var(--panel-width) * 4) - 5px);
+}
+
+.panels .panel:nth-child(6) {
+          left: calc(calc(var(--panel-width) * 5) - 6px);
+}
+
+@media (max-width: 1024px) {
+          .panels {
+                    width: 200vw;
+          }
+}
+
+@media screen and (max-width: 600px) {
+          .panels {
+                    width: 235vw;
           }
 }
