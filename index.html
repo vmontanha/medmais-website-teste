@@ -51,7 +51,7 @@
                     <li class="panel"></li>
                     <li class="panel"></li>
                     <div class="wrapper">
-                              <img src="./load.svg" alt="">
+                              <img src="../img/load.svg" alt="">
                               <div class="circle"></div>
                     </div>
           </ul>
@@ -165,46 +165,38 @@
 
                     // GSAP
                     gsap.from("#logo", {
-                              duration: 1, y: -100, opacity: 1, delay: 10
+                              duration: 1, y: -100, opacity: 1, delay: 4.5
                     });
                     // MENU
-                    gsap.from('.nav-link', { duration: 2, delay: 10, y: -100, opacity: 1, stagger: 0.5 })
+                    gsap.from('.nav-link', { duration: 2, delay: 5, y: -100, opacity: 1, stagger: 0.5 })
                     // ROW
                     gsap.from('.row', { duration: 3, delay: 10, x: -1000, opacity: 0, })
                     // Text Home
                     gsap.from(".home-title", {
-                              duration: 3, x: -100, opacity: 0, delay: 10
+                              duration: 3, x: -100, opacity: 0, delay: 4.5
                     });
                     // Text Home
                     gsap.from(".home-text", {
-                              duration: 3, x: -100, opacity: 0, delay: 10,
+                              duration: 3, x: -100, opacity: 0, delay: 5,
                     });
                     // button Home
                     gsap.from(".home-button", {
-                              duration: 3, y: -200, opacity: 0, delay: 10,
+                              duration: 3, y: -200, opacity: 0, delay: 5,
                     });
                     // Slide Nav
-                    gsap.from('.nav-btn', { opacity: 0, duration: 2, delay: 10, y: 100, ease: 'expo.out', stagger: .4 })
+                    gsap.from('.nav-btn', { opacity: 0, duration: 2, delay: 4.5, y: 100, ease: 'expo.out', stagger: .4 })
 
 
                     const tl = gsap.timeline({ paused: true });
 
                     tl.to(".panels .panel:first-child, .panels .panel:last-child", {
                               scaleY: 1,
-                              duration: 2,
+                              duration: 1,
                     })
                               .to(
                                         ".panels .panel:not(:first-child):not(:last-child)",
                                         { scaleY: 1 },
                                         "-=0.5"
-                              )
-                              .to(
-                                        ".wrapper",
-                                        {
-                                                  delay: 2,
-                                                  duration: 2
-                                        },
-                                        "-=0.8"
                               )
                               .to(".panels .panel", {
                                         scaleY: 0,
@@ -214,13 +206,13 @@
                               .to(".panels", {
                                         clipPath: "circle(0%)",
                                         skewX: 0,
-                                        duration: 4,
+                                        duration: 2,
                               })
                               .to(
                                         ".home",
                                         {
                                                   clipPath: "circle(100%)",
-                                                  duration: 2,
+                                                  duration: 1,
                                         },
                                         "-=0.3"
                               );
