@@ -43,7 +43,6 @@
 
           <div class="row"></div>
 
-
           <ul class="panels">
                     <li class="panel"></li>
                     <li class="panel"></li>
@@ -51,6 +50,10 @@
                     <li class="panel"></li>
                     <li class="panel"></li>
                     <li class="panel"></li>
+                    <div class="wrapper">
+                              <img src="./load.svg" alt="">
+                              <div class="circle"></div>
+                    </div>
           </ul>
 
           <section class="home">
@@ -162,26 +165,26 @@
 
                     // GSAP
                     gsap.from("#logo", {
-                              duration: 1, y: -100, opacity: 1, delay: 5
+                              duration: 1, y: -100, opacity: 1, delay: 10
                     });
                     // MENU
-                    gsap.from('.nav-link', { duration: 2, delay: 5, y: -100, opacity: 1, stagger: 0.5 })
+                    gsap.from('.nav-link', { duration: 2, delay: 10, y: -100, opacity: 1, stagger: 0.5 })
                     // ROW
-                    gsap.from('.row', { duration: 3, delay: 8, x: -1000, opacity: 0, })
+                    gsap.from('.row', { duration: 3, delay: 10, x: -1000, opacity: 0, })
                     // Text Home
                     gsap.from(".home-title", {
-                              duration: 3, x: -100, opacity: 0, delay: 6
+                              duration: 3, x: -100, opacity: 0, delay: 10
                     });
                     // Text Home
                     gsap.from(".home-text", {
-                              duration: 3, x: -100, opacity: 0, delay: 6,
+                              duration: 3, x: -100, opacity: 0, delay: 10,
                     });
                     // button Home
                     gsap.from(".home-button", {
-                              duration: 3, y: -200, opacity: 0, delay: 7,
+                              duration: 3, y: -200, opacity: 0, delay: 10,
                     });
                     // Slide Nav
-                    gsap.from('.nav-btn', { opacity: 0, duration: 2, delay: 7, y: 100, ease: 'expo.out', stagger: .4 })
+                    gsap.from('.nav-btn', { opacity: 0, duration: 2, delay: 10, y: 100, ease: 'expo.out', stagger: .4 })
 
 
                     const tl = gsap.timeline({ paused: true });
@@ -190,26 +193,34 @@
                               scaleY: 1,
                               duration: 2,
                     })
-                              // .to(
-                              //           ".panels .panel:not(:first-child):not(:last-child)",
-                              //           { scaleY: 1 },
-                              //           "-=0.5"
-                              // )
-                              // .to(".panels .panel", {
-                              //           scaleY: 0,
-                              //           duration: 0.5,
-                              //           stagger: 0.05,
-                              // })
+                              .to(
+                                        ".panels .panel:not(:first-child):not(:last-child)",
+                                        { scaleY: 1 },
+                                        "-=0.5"
+                              )
+                              .to(
+                                        ".wrapper",
+                                        {
+                                                  delay: 2,
+                                                  duration: 2
+                                        },
+                                        "-=0.8"
+                              )
+                              .to(".panels .panel", {
+                                        scaleY: 0,
+                                        duration: 1,
+                                        stagger: 0.05,
+                              })
                               .to(".panels", {
                                         clipPath: "circle(0%)",
                                         skewX: 0,
-                                        duration: 2,
+                                        duration: 4,
                               })
                               .to(
                                         ".home",
                                         {
                                                   clipPath: "circle(100%)",
-                                                  duration: 1,
+                                                  duration: 2,
                                         },
                                         "-=0.3"
                               );
