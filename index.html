@@ -50,6 +50,7 @@
                     <li class="panel"></li>
                     <li class="panel"></li>
                     <li class="panel"></li>
+                    <li class="panel"></li>
                     <div class="wrapper">
                               <img src="../img/load.svg" alt="">
                               <div class="circle"></div>
@@ -189,7 +190,7 @@
 
                     const tl = gsap.timeline({ paused: true });
 
-                    tl.to(".panels .panel:first-child, .panels .panel:last-child", {
+                    tl.to(".panels .panel:first-child, .panels .panel:nth-child(7)", {
                               scaleY: 1,
                               duration: 1,
                     })
@@ -201,21 +202,13 @@
                               .to(".panels .panel", {
                                         scaleY: 0,
                                         duration: 1,
-                                        stagger: 0.05,
+                                        stagger: 0.0,
                               })
                               .to(".panels", {
                                         clipPath: "circle(0%)",
                                         skewX: 0,
                                         duration: 2,
-                              })
-                              .to(
-                                        ".home",
-                                        {
-                                                  clipPath: "circle(100%)",
-                                                  duration: 1,
-                                        },
-                                        "-=0.3"
-                              );
+                              });
 
                     //console.log(tl.duration());
 

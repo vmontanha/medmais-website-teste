@@ -3,7 +3,7 @@
 /* RESET STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-          --panel-width: calc(100% / 6);
+          --panel-width: calc(100% / 7);
           --darkblue: #d70e2e;
           --lightgray: #ffffff;
 }
@@ -243,7 +243,7 @@ section {
 
 .video-slide.active {
           clip-path: circle(150% at 0 50%);
-          transition: 6s ease;
+          transition: 2s ease;
           transition-property: clip-path;
 }
 
@@ -367,7 +367,7 @@ ul {
 .panels .panel {
           position: absolute;
           top: 0;
-          left: 5px;
+          left: 0px;
           bottom: 0;
           width: var(--panel-width);
           transform: scaleY(0) skewX(180deg);
