@@ -72,45 +72,38 @@
                               <a href="#" class="home-button">Saiba Mais</a>
                     </div>
                     <div class="content">
-                              <h1>SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                              <a href="#">Saiba Mais</a>
+                              <h1 class="home-title">SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
+                              <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                                        earum aut optio, ullam
+                                        corporis repellendus? Nam illo et, culpa maxime, fugit optio suscipit obcaecati
+                                        incidunt iste ullam exercitationem ratione? Aperiam.</p>
+                              <a href="#" class="home-button">Saiba Mais</a>
                     </div>
                     <div class="content">
-                              <h1>SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                              <a href="#">Saiba Mais</a>
+                              <h1 class="home-title">SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
+                              <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                                        earum aut optio, ullam
+                                        corporis repellendus? Nam illo et, culpa maxime, fugit optio suscipit obcaecati
+                                        incidunt iste ullam exercitationem ratione? Aperiam.</p>
+                              <a href="#" class="home-button">Saiba Mais</a>
                     </div>
                     <div class="content">
-                              <h1>SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                              <a href="#">Saiba Mais</a>
+                              <h1 class="home-title">SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
+                              <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                                        earum aut optio, ullam
+                                        corporis repellendus? Nam illo et, culpa maxime, fugit optio suscipit obcaecati
+                                        incidunt iste ullam exercitationem ratione? Aperiam.</p>
+                              <a href="#" class="home-button">Saiba Mais</a>
                     </div>
                     <div class="content">
-                              <h1>SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                              <a href="#">Saiba Mais</a>
+                              <h1 class="home-title">SEJA ONDE FOR, PRONTOS<br><span>PARA SALVAR VIDAS.</span></h1>
+                              <p class="home-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                                        earum aut optio, ullam
+                                        corporis repellendus? Nam illo et, culpa maxime, fugit optio suscipit obcaecati
+                                        incidunt iste ullam exercitationem ratione? Aperiam.</p>
+                              <a href="#" class="home-button">Saiba Mais</a>
                     </div>
+
                     <!-- <div class="media-icons">
                               <a href="#"><i class="fab fa-facebook-f"></i></a>
                               <a href="#"><i class="fab fa-instagram"></i></a>
@@ -118,10 +111,10 @@
                     </div> -->
                     <div class="slider-navigation">
                               <div class="nav-btn active"></div>
-                              <div class="nav-btn"></div>
-                              <div class="nav-btn"></div>
-                              <div class="nav-btn"></div>
-                              <div class="nav-btn"></div>
+                              <div class="nav-btn" onclick="navLink()"></div>
+                              <div class="nav-btn" onclick="navLink()"></div>
+                              <div class="nav-btn" onclick="navLink()"></div>
+                              <div class="nav-btn" onclick="navLink()"></div>
                     </div>
           </section>
 
@@ -215,6 +208,22 @@
                     window.addEventListener("load", function () {
                               tl.play();
                     });
+
+                    function navLink() {
+
+                              gsap.from(".home-title", {
+                                        duration: 3, x: -100, opacity: 0, delay: 0
+                              });
+                              // Text Home
+                              gsap.from(".home-text", {
+                                        duration: 3, x: -100, opacity: 0, delay: 0,
+                              });
+                              // button Home
+                              gsap.from(".home-button", {
+                                        duration: 3, y: -200, opacity: 0, delay: 0,
+                              });
+
+                    }
 
           </script>
 
